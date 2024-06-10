@@ -80,7 +80,7 @@ body {
 	margin-top: 0;
 }
 
-.tile-inner.link::after {
+.tile-inner.link["key"]::after {
 	position: absolute;
 	bottom: 5px;
 	left: 0px;
@@ -92,7 +92,7 @@ body {
 	transition: content 0.5s ease-in-out;
 }
 
-.tile-inner.link:hover::after {
+.tile-inner.link["key"]:hover::after {
 	content: "TIP: Use " attr(key) " key to open in new tab.";
 }
 

@@ -1,5 +1,6 @@
 let linktiles = document.querySelectorAll(".tile.link");
 const isApple = ["Mac", "iPad"].some(v => navigator.userAgent.includes(v));
+const isPhone = ["iPhone", "Android", "phone", "Phone"].some(v => navigator.userAgent.includes(v));
 
 for (tile of linktiles) {
 	if (!tile.dataset.goto) {
@@ -7,9 +8,16 @@ for (tile of linktiles) {
 		continue;
 	}
 
-	tile.firstElementChild.setAttribute("key", (()=>{if (isApple) return "Cmd"; else return "Ctrl";})());
+	let key = (function() {
+		if (isApple) return "Cmd";
+		if (isPhone) return false; // check for isApple first as exact user agent string unknown
+		return "Ctrl"; // only Apple has cmd key
+	})();
 
+	if (!key) continue; // skip adding mod key if mobile
 	
+	tile.firstElementChild.setAttribute("key", key);
+
 	tile.addEventListener("click", function(e) {
 		let modKey = false;
 		if (isApple) modKey = e.metaKey;

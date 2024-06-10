@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DASHBOARD</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="font">
+	<!--<img id="bg-img" class="fullwidth x0y0abs vertalgn" style="z-index:-1;" src="https://wallpaperaccess.com/full/223952.jpg"/>-->
+  <div class="transbg ctrtext">
+		<div id="logo">Home</div>
+	</div>
+	<p></p>
+	<div id="main-content" class="transbg ctrtext">
+		<div id="datetime-div" class="tile">
+			<h1>Date &amp; Time</h1>
+			<h2 id="datetime-h2"></h2>
+		</div>
+		<div id="today-div" class="tile">
+			<h1>Today</h1>
+			<h2 id="today-h2"></h2>
+		</div>
+		<div id="countdown-div" class="tile">
+			<h1>Countdown</h1>
+			<h2 id="countdown-h2"></h1>
+		</div>
+		
+		<!--<div id="random-joke-div" class="tile">
+			<h1>Random Joke</h1>
+			<img id="random-joke-img"  src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Alea_1.png"/>
+			<h2 id="random-joke-h2"></h2>
+			<button id="random-joke-button" onclick="rollDice(5, document.getElementById('random-joke-img'), document.getElementById('random-joke-button'))">Show Joke</button>
+	</div>-->
+		<div class="tile link" data-goto="https://www.seab.gov.sg/docs/default-source/examination-timetable/2024-psle-exam-timetable.pdf">
+			<div class="tile-inner link">
+				<h3>QUICKLINK</h3>
+				<h1>PSLE Calendar</h1>
+			</div>
+		</div>
+		<div class="tile link" data-goto="https://www.seab.gov.sg/home/examinations/psle/psle-formats-examined-in-2024">
+			<div class="tile-inner link">
+				<h3>QUICKLINK</h3>
+				<h1>PSLE Formats</h1>
+			</div>
+		</div>
+		
+	<!--<img id="bg-img" class="fullwidth vertalgn" style="z-index:-1;" src="https://wallpaperaccess.com/full/223952.jpg"/>-->
+  <script src="script.js"></script>
+	<script src="datetime-tile.js"></script>
+	<script src="random-joke-tile.js"></script>
+	<script src="link-tiles.js"></script>
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <!--<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> -->
+</body>
+
+</html>

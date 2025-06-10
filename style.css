@@ -94,12 +94,16 @@ body {
 	transition: content 0.5s ease-in-out;
 }
 
-.tile-inner.link[key]:hover::after {
+.tile.link:not(.disable) > .tile-inner.link[key]:hover::after {
 	content: "TIP: Use " attr(key) " key to open in new tab.";
 }
+.tile.link.disable > .tile-inner.link[key]:hover::after {
+	content: "This link is unavailable.";
+}
 
-.tile.link.disable {
+.tile.link.disable > .tile-inner.link {
 	background: grey;
+	color: darkgrey;
 	cursor: default;
 }
 
